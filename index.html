@@ -1,33 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <title>Anime Merchandise Store</title>
-    <link rel="stylesheet" href="style.css">
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>OTAKU VAULT — Anime Merchandise</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
 </head>
 <body>
 
+<!-- ── NAV ── -->
 <nav>
-    <a href="index.html">Home</a>
-    <a href="about.html">About</a>
-    <a href="merchandise.html">Anime Merchandise</a>
-    <a href="cart.html">Cart</a>
-    <a href="contact.html">Contact</a>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">OTAKU<span>VAULT</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="merchandise.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.7rem;">
+      <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
+      <a href="cart.html" class="cart-btn">🛒 Cart <span class="cart-badge" id="cartBadge">0</span></a>
+    </div>
+  </div>
 </nav>
 
-<div class="container">
-    <h1>Welcome to Anime Merchandise Store 🧡</h1>
-    <p>
-        Discover premium anime t-shirts, hoodies, posters, and collectibles.
-        Built for true otakus 🔥
-    </p>
+<!-- ── HERO ── -->
+<section class="hero">
+  <div class="hero-glow"></div>
+  <div class="hero-content">
+    <h1>ANIME MERCH<br/>UNIVERSE</h1>
+    <p>Collectibles, figures, apparel &amp; more — curated for the true otaku. Limited drops every week.</p>
+    <a href="merchandise.html" class="btn-hero">Browse Collection</a>
+  </div>
+</section>
 
-    <br>
-
-    <a href="merchandise.html">
-        <button>Shop Anime Merchandise</button>
-    </a>
+<!-- ── MARQUEE ── -->
+<div class="featured-strip">
+  <div class="strip-track">
+    <span>🍃 <em>Naruto</em> &nbsp;&nbsp; ⚔️ <em>Attack on Titan</em> &nbsp;&nbsp; 🪓 <em>Chainsaw Man</em> &nbsp;&nbsp; 🕶️ <em>Jujutsu Kaisen</em> &nbsp;&nbsp; 🧢 <em>Spy x Family</em> &nbsp;&nbsp; 🗡️ <em>One Piece</em> &nbsp;&nbsp; 🧥 <em>Steins;Gate</em> &nbsp;&nbsp; 🤖 <em>Neon Genesis</em> &nbsp;&nbsp;</span>
+    <span>🍃 <em>Naruto</em> &nbsp;&nbsp; ⚔️ <em>Attack on Titan</em> &nbsp;&nbsp; 🪓 <em>Chainsaw Man</em> &nbsp;&nbsp; 🕶️ <em>Jujutsu Kaisen</em> &nbsp;&nbsp; 🧢 <em>Spy x Family</em> &nbsp;&nbsp; 🗡️ <em>One Piece</em> &nbsp;&nbsp; 🧥 <em>Steins;Gate</em> &nbsp;&nbsp; 🤖 <em>Neon Genesis</em> &nbsp;&nbsp;</span>
+  </div>
 </div>
 
+<!-- ── FEATURED PRODUCTS ── -->
+<div class="page-body" style="padding-top:0;">
+  <h2 class="sec-title">⚡ Featured Drops</h2>
+  <p class="sec-sub">Freshly restocked — don't sleep on these</p>
+  <div class="product-grid" id="featuredGrid"></div>
+
+  <!-- WHY CHOOSE US -->
+  <h2 class="sec-title" style="padding-top:1rem;">👾 Why Choose OtakuVault</h2>
+  <p class="sec-sub">We're not just a store — we're a community</p>
+  <div style="max-width:1260px;margin:0 auto;padding:0 1.5rem 4.5rem;display:grid;grid-template-columns:repeat(auto-fill,minmax(230px,1fr));gap:1.2rem;">
+    <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:1.8rem 1.2rem;text-align:center;transition:border-color .25s,transform .25s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+      <div style="font-size:2.2rem;margin-bottom:0.5rem;">✅</div>
+      <h4 style="color:var(--accent);font-size:0.88rem;text-transform:uppercase;letter-spacing:1px;">100 % Authentic</h4>
+      <p style="color:var(--text-dim);font-size:0.8rem;margin-top:0.35rem;line-height:1.5;">Every item verified directly from official licensors.</p>
+    </div>
+    <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:1.8rem 1.2rem;text-align:center;transition:border-color .25s,transform .25s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+      <div style="font-size:2.2rem;margin-bottom:0.5rem;">🚚</div>
+      <h4 style="color:var(--accent);font-size:0.88rem;text-transform:uppercase;letter-spacing:1px;">Free Shipping</h4>
+      <p style="color:var(--text-dim);font-size:0.8rem;margin-top:0.35rem;line-height:1.5;">On all orders over $50. Ships worldwide.</p>
+    </div>
+    <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:1.8rem 1.2rem;text-align:center;transition:border-color .25s,transform .25s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+      <div style="font-size:2.2rem;margin-bottom:0.5rem;">🔄</div>
+      <h4 style="color:var(--accent);font-size:0.88rem;text-transform:uppercase;letter-spacing:1px;">30-Day Returns</h4>
+      <p style="color:var(--text-dim);font-size:0.8rem;margin-top:0.35rem;line-height:1.5;">Changed your mind? No questions asked.</p>
+    </div>
+    <div style="background:var(--surface);border-radius:var(--radius);border:1px solid var(--border);padding:1.8rem 1.2rem;text-align:center;transition:border-color .25s,transform .25s;" onmouseover="this.style.borderColor='var(--accent)';this.style.transform='translateY(-4px)'" onmouseout="this.style.borderColor='var(--border)';this.style.transform='translateY(0)'">
+      <div style="font-size:2.2rem;margin-bottom:0.5rem;">💬</div>
+      <h4 style="color:var(--accent);font-size:0.88rem;text-transform:uppercase;letter-spacing:1px;">24/7 Support</h4>
+      <p style="color:var(--text-dim);font-size:0.8rem;margin-top:0.35rem;line-height:1.5;">Our otaku support team is always here for you.</p>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OTAKU VAULT</h4>
+      <p>Authentic anime merch for real fans. Founded 2022. Ships worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="merchandise.html">Figures</a></li>
+        <li><a href="merchandise.html">Apparel</a></li>
+        <li><a href="merchandise.html">Accessories</a></li>
+        <li><a href="merchandise.html">Posters</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 OtakuVault. All rights reserved. Made with ❤️ for anime fans.</div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"><span class="toast-icon" id="toastIcon">✅</span><div class="toast-text" id="toastText"></div></div>
+
+<script src="script.js"></script>
 </body>
 </html>
