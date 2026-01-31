@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>About Us — OTAKU VAULT</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">OTAKU<span>VAULT</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="merchandise.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.7rem;">
+      <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
+      <a href="cart.html" class="cart-btn">🛒 Cart <span class="cart-badge" id="cartBadge">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── PAGE CONTENT ── -->
+<div class="page-body">
+  <h2 class="sec-title">👾 About Us</h2>
+  <div class="divider"></div>
+
+  <div class="about-wrap">
+    <!-- hero card -->
+    <div class="about-hero">
+      <h2>Welcome to OtakuVault</h2>
+      <p>We're a community-driven anime merchandise store founded in 2022 by hardcore fans who were tired of low-quality knock-offs. Every item we carry is sourced from official licensors or verified independent artists. Our mission is simple: bring authentic, high-quality anime merch to collectors worldwide — at prices that don't break the bank.</p>
+      <p style="margin-top:.75rem;">Whether you're hunting for a rare figure, want to rep your fave series with exclusive apparel, or just need something cool for your shelf — OtakuVault has you covered.</p>
+
+      <!-- stats -->
+      <div class="about-stats">
+        <div class="stat-box">
+          <div class="num">12K+</div>
+          <div class="lbl">Happy Collectors</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">800+</div>
+          <div class="lbl">Unique Items</div>
+        </div>
+        <div class="stat-box">
+          <div class="num">50+</div>
+          <div class="lbl">Series Covered</div>
+        </div>
+      </div>
+    </div>
+
+    <!-- team -->
+    <div class="about-team">
+      <h3>The Crew</h3>
+      <div class="team-grid">
+        <div class="team-card">
+          <div class="team-avatar" style="background:#1f1630;">🧑‍💻</div>
+          <h4>Kenji M.</h4>
+          <span>Founder & Curator</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:#1a2030;">🎨</div>
+          <h4>Yuki T.</h4>
+          <span>Art & Design</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:#1f2518;">📦</div>
+          <h4>Hiro S.</h4>
+          <span>Logistics Lead</span>
+        </div>
+        <div class="team-card">
+          <div class="team-avatar" style="background:#2a1a1a;">💬</div>
+          <h4>Sakura N.</h4>
+          <span>Community Mgr</span>
+        </div>
+      </div>
+    </div>
+
+    <!-- FAQ -->
+    <h2 class="sec-title" style="padding-top:2.5rem;">❓ FAQ</h2>
+    <div class="divider"></div>
+    <div class="faq-wrap" id="faqWrap"></div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OTAKU VAULT</h4>
+      <p>Authentic anime merch for real fans. Founded 2022. Ships worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="merchandise.html">Figures</a></li>
+        <li><a href="merchandise.html">Apparel</a></li>
+        <li><a href="merchandise.html">Accessories</a></li>
+        <li><a href="merchandise.html">Posters</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 OtakuVault. All rights reserved. Made with ❤️ for anime fans.</div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"><span class="toast-icon" id="toastIcon">✅</span><div class="toast-text" id="toastText"></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
