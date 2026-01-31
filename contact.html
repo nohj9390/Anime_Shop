@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Contact — OTAKU VAULT</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">OTAKU<span>VAULT</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="merchandise.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.7rem;">
+      <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
+      <a href="cart.html" class="cart-btn">🛒 Cart <span class="cart-badge" id="cartBadge">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── PAGE CONTENT ── -->
+<div class="page-body">
+  <h2 class="sec-title">📬 Contact Us</h2>
+  <div class="divider"></div>
+
+  <div class="contact-wrap">
+    <div class="form-card">
+      <h2>Drop Us a Message</h2>
+      <p>Have a question, suggestion, or just want to geek out? We'd love to hear from you.</p>
+
+      <form id="contactForm">
+        <div class="form-row">
+          <div class="form-group">
+            <label for="cf-fname">First Name</label>
+            <input type="text" id="cf-fname" placeholder="Naruto" required/>
+          </div>
+          <div class="form-group">
+            <label for="cf-lname">Last Name</label>
+            <input type="text" id="cf-lname" placeholder="Uzumaki" required/>
+          </div>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-email">Email Address</label>
+          <input type="email" id="cf-email" placeholder="you@email.com" required/>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-subject">Subject</label>
+          <select id="cf-subject">
+            <option value="" disabled selected>Choose a topic…</option>
+            <option value="order">Order Inquiry</option>
+            <option value="product">Product Question</option>
+            <option value="return">Return / Exchange</option>
+            <option value="collab">Collaboration</option>
+            <option value="other">Other</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label for="cf-msg">Message</label>
+          <textarea id="cf-msg" placeholder="What's on your mind?" required></textarea>
+        </div>
+
+        <button type="submit" class="btn-submit">Send Message ✉️</button>
+      </form>
+    </div>
+
+    <!-- info cards -->
+    <div class="contact-info-row">
+      <div class="contact-info-card">
+        <div class="ci-icon">📧</div>
+        <h4>Email</h4>
+        <p>hello@otakuvault.com</p>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon">📱</div>
+        <h4>Phone</h4>
+        <p>+1 (555) 0-ANIME</p>
+      </div>
+      <div class="contact-info-card">
+        <div class="ci-icon">📍</div>
+        <h4>Location</h4>
+        <p>42 Manga Lane, Tokyo</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OTAKU VAULT</h4>
+      <p>Authentic anime merch for real fans. Founded 2022. Ships worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="merchandise.html">Figures</a></li>
+        <li><a href="merchandise.html">Apparel</a></li>
+        <li><a href="merchandise.html">Accessories</a></li>
+        <li><a href="merchandise.html">Posters</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 OtakuVault. All rights reserved. Made with ❤️ for anime fans.</div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"><span class="toast-icon" id="toastIcon">✅</span><div class="toast-text" id="toastText"></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
