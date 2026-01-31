@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Checkout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<nav>
+    <a href="index.html">Home</a>
+    <a href="merchandise.html">Merchandise</a>
+    <a href="cart.html">Cart</a>
+</nav>
+
+<div class="container">
+    <h2>Checkout</h2>
+
+    <form onsubmit="alert('Order placed successfully!'); localStorage.clear();">
+        <label>Full Name</label>
+        <input type="text" required>
+
+        <label>Address</label>
+        <textarea required></textarea>
+
+        <label>Payment Method</label>
+        <select>
+            <option>Cash on Delivery</option>
+            <option>UPI</option>
+            <option>Card</option>
+        </select>
+
+        <br><br>
+        <button type="submit">Place Order</button>
+    </form>
+</div>
+
+</body>
+</html>
