@@ -1,24 +1,80 @@
-<div class="products">
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Shop — OTAKU VAULT</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
 
-    <div class="product">
-        <img src="https://i.imgur.com/9XqZ7Yb.jpg">
-        <h3>Naruto T-Shirt</h3>
-        <p>₹799</p>
-        <button onclick="addToCart('Naruto T-Shirt', 799)">Add to Cart</button>
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">OTAKU<span>VAULT</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="merchandise.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.7rem;">
+      <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
+      <a href="cart.html" class="cart-btn">🛒 Cart <span class="cart-badge" id="cartBadge">0</span></a>
     </div>
+  </div>
+</nav>
 
-    <div class="product">
-        <img src="https://i.imgur.com/oYiTqum.jpg">
-        <h3>One Piece Hoodie</h3>
-        <p>₹1299</p>
-        <button onclick="addToCart('One Piece Hoodie', 1299)">Add to Cart</button>
-    </div>
-
-    <div class="product">
-        <img src="https://i.imgur.com/JfPpwOA.jpg">
-        <h3>AOT Poster</h3>
-        <p>₹399</p>
-        <button onclick="addToCart('AOT Poster', 399)">Add to Cart</button>
-    </div>
-
+<!-- ── PAGE CONTENT ── -->
+<div class="page-body">
+  <h2 class="sec-title">🏪 Full Shop</h2>
+  <p class="sec-sub">Browse every item in the vault — 12 unique products across 4 categories</p>
+  <div class="filter-bar" id="filterBar"></div>
+  <div class="product-grid" id="shopGrid"></div>
 </div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OTAKU VAULT</h4>
+      <p>Authentic anime merch for real fans. Founded 2022. Ships worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="merchandise.html">Figures</a></li>
+        <li><a href="merchandise.html">Apparel</a></li>
+        <li><a href="merchandise.html">Accessories</a></li>
+        <li><a href="merchandise.html">Posters</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 OtakuVault. All rights reserved. Made with ❤️ for anime fans.</div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"><span class="toast-icon" id="toastIcon">✅</span><div class="toast-text" id="toastText"></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
