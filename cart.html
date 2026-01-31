@@ -1,3 +1,115 @@
-<a href="checkout.html">
-    <button>Proceed to Checkout</button>
-</a>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>Cart — OTAKU VAULT</title>
+<link href="https://fonts.googleapis.com/css2?family=Bangers&family=Nunito:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+
+<!-- ── NAV ── -->
+<nav>
+  <div class="nav-inner">
+    <a href="index.html" class="logo">OTAKU<span>VAULT</span></a>
+    <ul class="nav-links">
+      <li><a href="index.html">Home</a></li>
+      <li><a href="merchandise.html">Shop</a></li>
+      <li><a href="about.html">About</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+    <div style="display:flex;align-items:center;gap:0.7rem;">
+      <div id="hamburger" class="hamburger"><span></span><span></span><span></span></div>
+      <a href="cart.html" class="cart-btn">🛒 Cart <span class="cart-badge" id="cartBadge">0</span></a>
+    </div>
+  </div>
+</nav>
+
+<!-- ── PAGE CONTENT ── -->
+<div class="page-body">
+  <h2 class="sec-title">🛒 Your Cart</h2>
+  <div class="divider"></div>
+
+  <div class="cart-wrap">
+    <!-- empty state (hidden when cart has items) -->
+    <div class="cart-empty" id="cartEmpty">
+      <div class="ce-icon">🛒</div>
+      <p>Your cart is empty</p>
+      <small>Looks like you haven't added anything yet.</small>
+      <br/>
+      <a href="merchandise.html" class="btn-hero" style="margin-top:1.4rem;font-size:0.88rem;padding:0.68rem 1.7rem;display:inline-block;">Browse Shop</a>
+    </div>
+
+    <!-- dynamic item rows (filled by JS) -->
+    <div id="cartItemsWrap"></div>
+
+    <!-- order summary (hidden when cart is empty) -->
+    <div class="cart-summary" id="cartSummary" style="display:none;">
+      <h3>Order Summary</h3>
+      <div class="summary-row">
+        <span>Subtotal</span>
+        <strong id="cpSubtotal">$0.00</strong>
+      </div>
+      <div class="summary-row free">
+        <span>Shipping</span>
+        <strong>FREE</strong>
+      </div>
+      <div class="summary-row">
+        <span>Tax (est. 8 %)</span>
+        <strong id="cpTax">$0.00</strong>
+      </div>
+      <div class="summary-row total">
+        <span>Total</span>
+        <strong id="cpTotal">$0.00</strong>
+      </div>
+      <button class="btn-checkout" onclick="doCheckout()">Proceed to Checkout →</button>
+      <a href="merchandise.html" class="btn-continue">← Continue Shopping</a>
+    </div>
+  </div>
+</div>
+
+<!-- ── FOOTER ── -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-col">
+      <h4>OTAKU VAULT</h4>
+      <p>Authentic anime merch for real fans. Founded 2022. Ships worldwide.</p>
+    </div>
+    <div class="footer-col">
+      <h4>Shop</h4>
+      <ul>
+        <li><a href="merchandise.html">Figures</a></li>
+        <li><a href="merchandise.html">Apparel</a></li>
+        <li><a href="merchandise.html">Accessories</a></li>
+        <li><a href="merchandise.html">Posters</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Help</h4>
+      <ul>
+        <li><a href="about.html">About Us</a></li>
+        <li><a href="contact.html">Contact</a></li>
+        <li><a href="#">Shipping Info</a></li>
+        <li><a href="#">Returns</a></li>
+      </ul>
+    </div>
+    <div class="footer-col">
+      <h4>Follow Us</h4>
+      <ul>
+        <li><a href="#">Twitter / X</a></li>
+        <li><a href="#">Instagram</a></li>
+        <li><a href="#">Discord</a></li>
+        <li><a href="#">YouTube</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="footer-bottom">© 2026 OtakuVault. All rights reserved. Made with ❤️ for anime fans.</div>
+</footer>
+
+<!-- ── TOAST ── -->
+<div class="toast" id="toast"><span class="toast-icon" id="toastIcon">✅</span><div class="toast-text" id="toastText"></div></div>
+
+<script src="script.js"></script>
+</body>
+</html>
